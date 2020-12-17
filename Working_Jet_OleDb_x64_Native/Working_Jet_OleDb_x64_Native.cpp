@@ -122,6 +122,8 @@ VOID RunNorthwindTest()
                                             RELEASE(pCommand);
                                         }
                                     }
+                                    
+                                    RELEASE(pDbCreateCommand);
                                 }
 
                                 RELEASE(pSession);
