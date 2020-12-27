@@ -1,28 +1,28 @@
 ﻿using System;
 using System.Data.OleDb;
+using System.Diagnostics;
 
 namespace AccessViolationException_Jet_OleDb_x64
 {
     internal static class Program
     {
-        private static void Main()
+        private static void Main(string[] args)
         {
             //
             // AccessViolationException_Jet_OleDb_x64 will result in an AccessViolationException in about 1 out of 5 runs:
             //
 
             Console.WriteLine($"Running as {(Environment.Is64BitProcess ? "x64" : "x86")} process.");
+            Console.WriteLine();
+            System.Threading.Thread.Sleep(TimeSpan.FromSeconds(0.25));
 
             if (Environment.Is64BitProcess)
             {
-                Console.WriteLine();
-                System.Threading.Thread.Sleep(TimeSpan.FromSeconds(1));
-
-                RunNorthwindTest();
+                RunNorthwindTest(args.Length == 1 && string.Equals(args[0], "wait", StringComparison.OrdinalIgnoreCase));
             }
         }
 
-        private static void RunNorthwindTest()
+        private static void RunNorthwindTest(bool waitForDebuggerAttachment)
         {
             try
             {
@@ -35,9 +35,19 @@ namespace AccessViolationException_Jet_OleDb_x64
                 using var connection = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Northwind.accdb");
                 connection.Open();
 
-                for (var i = 0; i < 1000; i++)
+                for (var i = 0; i < 100; i++)
                 {
                     Console.WriteLine($"{i:000}");
+
+                    if (i == 10 &&
+                        waitForDebuggerAttachment)
+                    {
+                        while (!Debugger.IsAttached &&
+                               Console.ReadKey(true).Key != ConsoleKey.Enter)
+                        {
+                            System.Threading.Thread.Sleep(500);
+                        }
+                    }
 
                     //
                     // Select_Union:
