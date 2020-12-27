@@ -9,6 +9,8 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Working_Jet_Odbc_x64", "Wor
 EndProject
 Project("{8BC9CEB8-8B4A-11D0-8D11-00A0C91BC942}") = "Working_Jet_OleDb_x64_Native", "Working_Jet_OleDb_x64_Native\Working_Jet_OleDb_x64_Native.vcxproj", "{EE050762-C44A-41A1-959C-4940C3FB932B}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AccessViolationException_Jet_OleDb_x64_CSharp", "AccessViolationException_Jet_OleDb_x64_CSharp\AccessViolationException_Jet_OleDb_x64_CSharp.csproj", "{89DB703E-8977-4749-AFD5-730F87A77EA8}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -54,6 +56,18 @@ Global
 		{EE050762-C44A-41A1-959C-4940C3FB932B}.Release|x64.Build.0 = Release|x64
 		{EE050762-C44A-41A1-959C-4940C3FB932B}.Release|x86.ActiveCfg = Release|Win32
 		{EE050762-C44A-41A1-959C-4940C3FB932B}.Release|x86.Build.0 = Release|Win32
+		{89DB703E-8977-4749-AFD5-730F87A77EA8}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{89DB703E-8977-4749-AFD5-730F87A77EA8}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{89DB703E-8977-4749-AFD5-730F87A77EA8}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{89DB703E-8977-4749-AFD5-730F87A77EA8}.Debug|x64.Build.0 = Debug|Any CPU
+		{89DB703E-8977-4749-AFD5-730F87A77EA8}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{89DB703E-8977-4749-AFD5-730F87A77EA8}.Debug|x86.Build.0 = Debug|Any CPU
+		{89DB703E-8977-4749-AFD5-730F87A77EA8}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{89DB703E-8977-4749-AFD5-730F87A77EA8}.Release|Any CPU.Build.0 = Release|Any CPU
+		{89DB703E-8977-4749-AFD5-730F87A77EA8}.Release|x64.ActiveCfg = Release|Any CPU
+		{89DB703E-8977-4749-AFD5-730F87A77EA8}.Release|x64.Build.0 = Release|Any CPU
+		{89DB703E-8977-4749-AFD5-730F87A77EA8}.Release|x86.ActiveCfg = Release|Any CPU
+		{89DB703E-8977-4749-AFD5-730F87A77EA8}.Release|x86.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
