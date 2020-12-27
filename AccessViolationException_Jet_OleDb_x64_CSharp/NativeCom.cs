@@ -214,13 +214,10 @@ namespace AccessViolationException_Jet_OleDb_x64_CSharp
             //            REFIID riid,
             //            /* [annotation][iid_is][out] */ 
             //            _Outptr_result_maybenull_  IUnknown **ppSession) = 0;
-            // [return: MarshalAs(UnmanagedType.Interface)]
-            // object GetDBSession(
-            //     [In] IntPtr pUnkOuter,
-            //     [In] Guid riid);
-            
-            [Obsolete("not used", true)]
-            void GetDBSession(/*deleted parameter signature*/);
+            [return: MarshalAs(UnmanagedType.Interface)]
+            object GetDBSession(
+                [In] IntPtr pUnkOuter,
+                [In] Guid riid);
         }
         
         // MIDL_INTERFACE("0c733a27-2a1c-11ce-ade5-00aa0044773d")
@@ -270,35 +267,25 @@ namespace AccessViolationException_Jet_OleDb_x64_CSharp
             //            REFIID riid,
             //            /* [annotation][iid_is][out] */ 
             //            _Outptr_result_maybenull_  IUnknown **ppSession) = 0;
-            // [return: MarshalAs(UnmanagedType.Interface)]
-            // object GetDBSession(
-            //     [In] IntPtr pUnkOuter,
-            //     [In] Guid riid);
-            
-            [Obsolete("not used", true)]
-            void GetDBSession(/*deleted parameter signature*/);
+            [return: MarshalAs(UnmanagedType.Interface)]
+            object GetDBSession(
+                [In] IntPtr pUnkOuter,
+                [In] Guid riid);
 
             // virtual /* [local] */ HRESULT STDMETHODCALLTYPE GetCommandText( 
             //            /* [annotation][out][in] */ 
             //            _Inout_opt_  GUID *pguidDialect,
             //            /* [annotation][out] */ 
             //            _Outptr_  LPOLESTR *ppwszCommand) = 0;
-            // [return: MarshalAs(UnmanagedType.LPWStr)]
-            // string GetCommandText(
-            //     [In] ref Guid pguidDialect);
-            
-            [Obsolete("not used", true)]
-            void GetCommandText(/*deleted parameter signature*/);
+            [return: MarshalAs(UnmanagedType.LPWStr)]
+            string GetCommandText(
+                [In] ref Guid pguidDialect);
 
             // virtual /* [local] */ HRESULT STDMETHODCALLTYPE SetCommandText( 
             //            /* [in] */
             //            REFGUID rguidDialect,
             //            /* [annotation][unique][in] */ 
             //            _In_opt_z_  LPCOLESTR pwszCommand) = 0;
-            // void SetCommandText(
-            //     [In] Guid rguidDialect,
-            //     [In, MarshalAs(UnmanagedType.LPWStr)] string pwszCommand);
-            
             void SetCommandText(
                 [In] Guid rguidDialect,
                 [In, MarshalAs(UnmanagedType.LPWStr)] string pwszCommand);
