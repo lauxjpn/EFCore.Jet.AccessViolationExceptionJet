@@ -1,6 +1,6 @@
-# Memory Access Violation Exception using OLE DB provider for Jet/ACE
+# Memory Access Violation Exception using the x64 OLE DB provider for Jet/ACE
 
-This repository contains projects that reproduce a non-deterministic memory access violation when using the OLE DB provider for Jet/ACE.
+This repository contains projects that reproduce a non-deterministic memory access violation when using the x64 OLE DB provider for Jet/ACE.
 
 ## How to reproduce
 
