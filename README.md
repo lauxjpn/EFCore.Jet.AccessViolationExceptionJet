@@ -5,8 +5,11 @@ This repository contains projects that reproduce a non-deterministic memory acce
 ## How to reproduce
 
 Use a vanilla Windows 11/10 x64 installation as the base image.
+
 Install the [Microsoft Access Database Engine 2016 Redistributable](https://www.microsoft.com/en-us/download/details.aspx?id=54920) x64.
+
 Install the [.NET 10 SDK](https://dotnet.microsoft.com/en-us/download/dotnet/thank-you/sdk-10.0.100-windows-x64-installer).
+
 Install [Git for Windows](https://github.com/git-for-windows/git/releases/download/v2.52.0.windows.1/Git-2.52.0-64-bit.exe).
 
 Run the following PowerShell commands:
