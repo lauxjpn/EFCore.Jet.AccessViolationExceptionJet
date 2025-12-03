@@ -32,7 +32,7 @@ namespace AccessViolationException_Jet_OleDb_x64
                 //   - Microsoft.ACE.OLEDB.12.0: https://www.microsoft.com/en-us/download/details.aspx?id=13255
                 //
 
-                using var connection = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Northwind.accdb");
+                using var connection = new OleDbConnection("Provider=Microsoft.ACE.OLEDB.16.0;Data Source=Northwind.accdb");
                 connection.Open();
 
                 for (var i = 0; i < 100; i++)

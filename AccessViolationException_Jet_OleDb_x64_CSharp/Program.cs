@@ -2,7 +2,6 @@
 using System.Diagnostics;
 using System.Globalization;
 using System.Runtime.InteropServices;
-using System.Runtime.InteropServices.WindowsRuntime;
 
 namespace AccessViolationException_Jet_OleDb_x64_CSharp
 {
@@ -44,7 +43,7 @@ namespace AccessViolationException_Jet_OleDb_x64_CSharp
             {
                 try
                 {
-                    const string connectionString = "Provider=Microsoft.ACE.OLEDB.12.0;Data Source=Northwind.accdb";
+                    const string connectionString = "Provider=Microsoft.ACE.OLEDB.16.0;Data Source=Northwind.accdb";
 
                     NativeCom.IDBInitialize dbInitialize = null;
                     dbInitialize = msdaInitialize.GetDataSource(
