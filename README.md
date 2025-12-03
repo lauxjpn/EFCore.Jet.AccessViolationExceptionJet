@@ -23,18 +23,18 @@ dotnet build '.\AccessViolationException_Jet_OleDb_x64\AccessViolationException_
 dotnet build '.\AccessViolationException_Jet_OleDb_x64_CSharp\AccessViolationException_Jet_OleDb_x64_CSharp.csproj' -c Debug
 ```
 
-Now run one of the compiled projects a couple of times. It should result in a memory violation in at least 1 out of 5 runs. The following code runs the projects until they fail:
+Now run one of the compiled projects a couple of times. It should result in a memory violation in at least 1 out of 5 runs. The following PowerShell commands run the projects until they fail:
 ```powershell
-# Run the projects that uses System.Data.OleDb:
+# Run the project that uses System.Data.OleDb:
 while ($true) { .\AccessViolationException_Jet_OleDb_x64\bin\Debug\net10.0-windows\AccessViolationException_Jet_OleDb_x64.exe; if ($LASTEXITCODE -ne 0) { break; } }
 
-# Run the projects that directly calls the OLE DB objects/interfaces:
+# Run the project that directly calls the OLE DB objects/interfaces:
 while ($true) { .\AccessViolationException_Jet_OleDb_x64_CSharp\bin\Debug\net10.0-windows\AccessViolationException_Jet_OleDb_x64_CSharp.exe; if ($LASTEXITCODE -ne 0) { break; } }
 ```
 
 ## Example Runs
 
-The following lists outputs of different configurations that all reproduced the issue (run on 2025-12-02).
+The following list contains the outputs of various configurations that all reproduced the issue (run on 2025-12-02).
 
 <details>
 <summary>Run: Windows 11 x64, .NET 10.0.0 SDK, AccessViolationException_Jet_OleDb_x64, System.Data.OleDb 5.0.0, Debug build, .NET 3.1.32 Runtime, Microsoft Access Database Engine 2016 Redistributable x64, Microsoft.ACE.OLEDB.12.0</summary>
